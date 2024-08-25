@@ -4,19 +4,19 @@ import validator from "validator";
 const reservationSchema = new mongoose.Schema({
     firstName: {
         type: String,
-        require: true,
+        required: true,
         minLength: (3, "First name must contain at least 3 characters!"),
         minLength: (30, "First name canot exceed 30 characters!"),
     },
     lastName: {
         type: String,
-        require: true,
+        required: true,
         minLength: (3, "Last name must contain at least 3 characters!"),
         minLength: (30, "Last name canot exceed 30 characters!"),
     },
     email: {
         type: String,
-        require: true,
+        required: true,
         validate: [validator.isEmail, "Provide a valide email!"]
     },
     phone: {

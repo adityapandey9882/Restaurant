@@ -10,6 +10,5 @@ export const dbConnection = ()=> {
     .catch( (error) => {
         console.log("DB facing connection issues");
         console.error(error.message);
-        process.exit(1);
     })
 };
